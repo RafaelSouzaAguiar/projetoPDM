@@ -1,28 +1,14 @@
-import React from 'react'
+import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
 
-const LembreteLista = () => {
-  return (
-    <div className="container border mt-2 mb-2">
-        <div className="flex-grow-1">
-            <div className="text-badge text-bg-primary rounded
-                text-wrap text-center m-3 p-2">
-                    Preparar aula de progamação
-            </div>
+export default class LembreteLista extends Component {
+  render() {
+    return (
+      <div className="flex-grow-1">
+        <div className="text-bg-primary rounded text-center m-3 p-2">
+          {this.props.lembrete}
         </div>
-        <div className="flex-grow-1">
-            <div className="text-badge text-bg-primary rounded
-                text-wrap text-center m-3 p-2">
-                    Fazer feira
-            </div>
-        </div>
-        <div className="flex-grow-1">
-            <div className="text-badge text-bg-primary rounded
-                text-wrap text-center m-3 p-2">
-                    Preparar marmitas
-            </div>
-        </div>
-    </div>
-  )
+      </div>
+    )
+  }
 }
-
-export default LembreteLista
