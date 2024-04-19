@@ -22,16 +22,18 @@ class App extends React.Component {
       <div className="container border mt-2">
         <h1 className="text-center m-2">Meus lembretes</h1>
         <div className="container border mt-2 mb-2">
-          {
-            this.state.lista[0] ? (
-              this.state.lista.map((lembrete) => (
-                <LembreteLista
-                  lembrete={lembrete} />
-              ))
-            ) : (
-              <div className="align-items-center text-center m-2">Nenhum lembrete criado</div>
-            )
-          }
+          <div className="row">
+            {
+              this.state.lista[0] ? (
+                this.state.lista.map((lembrete) => (
+                  <LembreteLista
+                    lembrete={lembrete} />
+                ))
+              ) : (
+                <div className="align-items-center text-center m-2">Nenhum lembrete criado</div>
+              )
+            }
+          </div>
         </div>
 
         <LembreteEntrada
